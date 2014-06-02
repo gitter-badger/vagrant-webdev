@@ -21,7 +21,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider :virtualbox do |v|
     v.customize ["modifyvm", :id, "--memory", 1024]
     v.customize ["modifyvm", :id, "--cpus", 1]
-    v.customize ["modifyvm", :id, "--name", "Dev"]
+    v.customize ["modifyvm", :id, "--name", "vagrant-webdev"]
   end
 
   # PROVISIONING
