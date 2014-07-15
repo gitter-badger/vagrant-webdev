@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Importing settings
-. /vagrant/vagrant-webdev/config/config.sh
+# Settings
+DB_PASS='vagrant'
 
 # Repositories
 apt-get update
