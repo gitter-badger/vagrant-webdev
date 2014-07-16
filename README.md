@@ -22,6 +22,15 @@ $ vagrant up
 ```
 * That's all! You can ssh to VM by ```vagrant ssh```. Directory with your projects will be available in virtual machine as _/vagrant_.
 
+### Importing config files
+
+Some config files are imported from host system during provisioning. These files are listed in Vagrantfile in ```config_files``` variable: _key_ is the _name of the file_ and _value_ is the _destination path_ in guest file system. Destination path can include subfolders e.g. ```"foo.txt" => "/path/to/bar.cfg"```. These files are imported from _data/configs_ folder. You can use links in _data/configs_ folder to copy config files of your host system to guest. For example:
+
+```bash
+# cd to the root of vagrant-webdev project folder
+$ ln -s ~/.gitconfig data/configs/.gitconfig
+```
+
 Installed software
 ------------------
 
@@ -76,4 +85,3 @@ Todo
 * Try vagrant plugins to automatically update host's _/etc/hosts_ file (I don't want to have dnsmasq on host system):
     * https://github.com/smdahlen/vagrant-hostmanager
     * https://github.com/cogitatio/vagrant-hostsupdater
-* Add the ability to override host system configs (_.zshrc_, _.vimrc_, _.tmux.conf_, _.gitconfig_ etc) by VM specific ones from _config_ direcrory during provisioning in Vagrantfile.

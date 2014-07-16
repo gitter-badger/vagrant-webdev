@@ -26,22 +26,19 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # PROVISIONING
 
+  config_files = {
+    ".zshrc"     => "~/.zshrc",
+    ".vimrc"     => "~/.vimrc",
+    ".tmux.conf" => "~/.tmux.conf",
+    ".gitconfig" => "~/.gitconfig"
+  }
+
+  config_files.each do |filename, path|
+    if File.exist?("data/configs/#{filename}") then
+      config.vm.provision :file, source: "data/configs/#{filename}", destination: path
+    end
+  end
+
   config.vm.provision :shell, :path => "bootstrap.sh"
-
-  if File.exist?("#{Dir.home}/.zshrc") then 
-    config.vm.provision :file, source: '~/.zshrc', destination: "/home/vagrant/.zshrc"
-  end
-
-  if File.exist?("#{Dir.home}/.vimrc") then 
-    config.vm.provision :file, source: '~/.vimrc', destination: "/home/vagrant/.vimrc"
-  end
-
-  if File.exist?("#{Dir.home}/.tmux.conf") then 
-    config.vm.provision :file, source: '~/.tmux.conf', destination: "/home/vagrant/.tmux.conf"
-  end
-
-  if File.exist?("#{Dir.home}/.gitconfig") then 
-    config.vm.provision :file, source: '~/.gitconfig', destination: "/home/vagrant/.gitconfig"
-  end
 
 end
