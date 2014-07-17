@@ -27,6 +27,7 @@ apt-get install -y curl git vim htop tmux mc
 # other
 apt-get install -y memcached
 apt-get install -y mongodb
+apt-get install -y redis-server
 
 # composer
 curl -sS https://getcomposer.org/installer | php
