@@ -40,6 +40,7 @@ Installed software
 * phpMyAdmin
 * memcached
 * mongodb
+* redis
 * [composer](https://getcomposer.org/)
 * [php-cs-fixer](https://github.com/fabpot/PHP-CS-Fixer)
 * git
