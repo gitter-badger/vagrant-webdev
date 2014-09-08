@@ -27,10 +27,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # PROVISIONING
 
   config_files = {
-    ".zshrc"     => "~/.zshrc",
-    ".vimrc"     => "~/.vimrc",
-    ".tmux.conf" => "~/.tmux.conf",
-    ".gitconfig" => "~/.gitconfig"
+    ".zshrc"            => "~/.zshrc",
+    ".vimrc"            => "~/.vimrc",
+    ".tmux.conf"        => "~/.tmux.conf",
+    ".gitconfig"        => "~/.gitconfig",
+    ".gitconfig_global" => "~/.gitconfig_global",
   }
 
   config_files.each do |filename, path|
@@ -40,5 +41,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.provision :shell, :path => "bootstrap.sh"
+
+  config.vm.provision :shell, :path => "bootstrap-unprivileged.sh", :privileged => false
 
 end
