@@ -5,7 +5,7 @@ DB_PASS='vagrant'
 
 # Repositories
 apt-get update
-sudo apt-get install -y software-properties-common python-software-properties
+sudo apt-get install -y software-properties-common python-software-properties build-essential
 . /vagrant/vagrant-webdev/shell/repositories.sh
 apt-get update
 
@@ -23,6 +23,9 @@ apt-get install -y curl git vim htop tmux mc
 
 # mysql
 . /vagrant/vagrant-webdev/shell/mysql.sh
+
+# frontend
+. /vagrant/vagrant-webdev/shell/frontend.sh
 
 # other
 apt-get install -y memcached
