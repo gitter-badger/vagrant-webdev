@@ -36,9 +36,10 @@ Installed software
 
 * nginx
 * php (php-cli, php-fpm) + xdebug
-* mysql, phpMyAdmin
 * nodejs, npm
 * grunt, gulp, bower
+* python-pip
+* mysql, phpMyAdmin
 * memcached
 * mongodb
 * redis

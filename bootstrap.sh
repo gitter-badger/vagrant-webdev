@@ -21,6 +21,9 @@ apt-get install -y curl git vim htop tmux mc
 # php
 . /vagrant/vagrant-webdev/shell/php.sh
 
+# python
+. /vagrant/vagrant-webdev/shell/python.sh
+
 # mysql
 . /vagrant/vagrant-webdev/shell/mysql.sh
 
