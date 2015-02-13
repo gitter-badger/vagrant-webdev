@@ -15,7 +15,10 @@ $ sudo apt-get install virtualbox vagrant
 $ cd ~/projects
 $ git clone https://github.com/vasylchenko/vagrant-webdev.git
 ```
-* __Optional:__ Download and add vagrant box by typing ```vagrant box add ubuntu/trusty32```. Othrewise box will be downloaded automatically during the first virtual machine setup.
+* Download and add vagrant box
+```bash
+$ vagrant box add ubuntu/trusty32
+```
 * Go to repository directory and type
 ```bash
 $ vagrant up
