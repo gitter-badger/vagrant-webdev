@@ -13,10 +13,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network "private_network", ip: NETWORK_IP
   config.ssh.forward_agent = true
 
-  config.vm.synced_folder "../", "/vagrant", id: "vagrant-root",
-    owner: "vagrant",
-    group: "www-data",
-    mount_options: ["dmode=777,fmode=777"]
+  config.vm.synced_folder "../", "/vagrant", id: "vagrant-root", type: "nfs"
 
   config.vm.provider :virtualbox do |v|
     v.customize ["modifyvm", :id, "--memory", 1024]
