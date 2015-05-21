@@ -34,6 +34,7 @@ apt-get install -y curl git vim htop tmux mc
 apt-get install -y memcached
 apt-get install -y mongodb
 apt-get install -y redis-server
+apt-get install -y ansible
 
 # composer
 curl -sS https://getcomposer.org/installer | php
@@ -45,5 +46,3 @@ chmod a+x /usr/local/bin/php-cs-fixer
 
 # dnsmasq
 . /vagrant/vagrant-webdev/shell/dnsmasq.sh
-
-echo "====> Provisioning is successfully completed!"
