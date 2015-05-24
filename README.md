@@ -1,6 +1,8 @@
 vagrant-webdev
 ==============
 
+[![Join the chat at https://gitter.im/vasylchenko/vagrant-webdev](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/vasylchenko/vagrant-webdev?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This set of files allows me to deploy virtual machine for web development (mostly php) in a few minutes.
 
 Installation
